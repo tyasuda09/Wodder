@@ -6,21 +6,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	
-
-
 	</head> 
+	
 	<body>
-		
 		<button onclick ="myFunction()" type="button" class="btn btn-danger btn-lg center-block" style="margin-top: 200px; height: 75px">
 		<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Generate WOD
 		</button>
 		
 		<p></p>
-		
+		<div>
 		<script>
 		function myFunction() {
-    	document.getElementById("demo").innerHTML = "50 double unders";
+    	document.getElementById("WOD").innerHTML = {{ wodprime|tojson|safe }};
     	}
    		</script>
 
@@ -32,21 +29,11 @@
 		</style>
 
 		<table style ="width: 25%" align="center" class="table table-condensed">
-			<tr>
-    		<td><b>Annie</b></td>     		
-    		</tr>
-     		<tr> 
-     			<td id="demo">placeholder</td>
-     		</tr> 
-     		<tr>
-     			<td>25 pull ups</td>
-     		</tr> 
-     		<tr> 
-     			<td>50 burpees</td>
+    		<tr> 
+     			<td id="WOD">placeholder</td>
      		</tr>
      	</table>
 		</div>
-
 	</body> 
 </html> 
 
