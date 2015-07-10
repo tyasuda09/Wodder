@@ -1,5 +1,6 @@
 from flask import Flask, render_template, session, url_for 
-import random 
+
+import random 
 
 # create the application object 
 app = Flask(__name__) 
@@ -50,3 +51,14 @@ if __name__ == '__main__':
             # WODlist = [Jackie, Annie, Murph]
             # Jackie = ["Jackie", "1000 Meter Row", "45 Thrusts (45#/30#)", "30 Pull-ups"]
             # Annie = 
+#<script>
+        #function myFunction() {
+        #document.getElementById("WOD").innerHTML = {{ wodprime|tojson|safe }};
+        #}
+        #</script>  
+
+
+        #var randomDiv = document.getElementById("WOD");
+        #document.getElementById("myButton").addEventListener("click", function() {
+           # randomDiv.innerHTML = {{ wodprime|tojson|safe }};
+       # }); 

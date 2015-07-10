@@ -9,18 +9,13 @@
 	</head> 
 	
 	<body>
-		<button onclick ="myFunction()" type="button" class="btn btn-danger btn-lg center-block" style="margin-top: 200px; height: 75px">
+		<button id ="myButton" type="button" class="btn btn-danger btn-lg center-block" style="margin-top: 200px; height: 75px">
 		<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Generate WOD
 		</button>
 		
 		<p></p>
+		
 		<div>
-		<script>
-		function myFunction() {
-    	document.getElementById("WOD").innerHTML = {{ wodprime|tojson|safe }};
-    	}
-   		</script>
-
 		<style>
 			td {border: solid 1px lightgrey; text-align: center
 			}
@@ -33,7 +28,26 @@
      			<td id="WOD">placeholder</td>
      		</tr>
      	</table>
+
+     	<script>
+		
+		var randomStrings = [
+        "Jackie\n\n 1000 Meter Row\n 45 Thrusts\n 30 Pull-ups",
+        "Murph\n\n For time:\n 1 mile Run\n 100 Pull-ups\n 200 Push-ups\n 300 Squats\n 1 mile run",
+        "Bill\n\n 50 Meter Row\n 44444 Thrusts\n 10000 Pull-ups",
+        "Tom\n\n 50 Meter Row\n 44444 Thrusts\n 10000 Pull-ups"
+      	];
+
+     	var randomDiv = document.getElementById("WOD");
+  		document.getElementById("myButton").addEventListener("click", function() {
+          randomIndex = Math.round((Math.random()*randomStrings.length-1));
+          oldText = randomStrings[randomIndex];  
+       	  newText = oldText.replace(/\n/g, "<br />")   
+       	  randomDiv.innerHTML = newText;
+    		});
+   		
+   		</script>
+		
 		</div>
 	</body> 
 </html> 
-

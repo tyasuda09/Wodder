@@ -1,0 +1,4 @@
+"Jackie\n\n 1000 Meter Row\n 45 Thrusts\n 30 Pull-ups",
+"Murph\n\n For time:\n 1 mile Run\n 100 Pull-ups\n 200 Push-ups\n 300 Squats\n 1 mile run",
+"Bill\n\n 50 Meter Row\n 44444 Thrusts\n 10000 Pull-ups",
+"Tom\n\n 50 Meter Row\n 44444 Thrusts\n 10000 Pull-ups"
